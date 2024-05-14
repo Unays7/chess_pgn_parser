@@ -1,7 +1,8 @@
 # chess_pgn_parser
 A chess game parser and board position tracker in C++. Takes a filename as its single command-line argument, files will contain a chess game in PGN notation (https://en.wikipedia.org/wiki/Portable_Game_Notation) and outputs the final board state accounting for all the moves in the game.
 
-# Sample:
+# Sample Input:
+```
 [Event "F/S Return Match"]
 [Site "Belgrade, Serbia JUG"]
 [Date "1992.11.04"]
@@ -16,3 +17,24 @@ Nxe4 18. Bxe7 Qxe7 19. exd6 Qf6 20. Nbd2 Nxd6 21. Nc4 Nxc4 22. Bxc4 Nb6
 23. Ne5 Rae8 24. Bxf7+ Rxf7 25. Nxf7 Rxe1+ 26. Qxe1 Kxf7 27. Qe3 Qg5 28. Qxg5
 hxg5 29. b3 Ke6 30. a3 Kd6 31. axb4 cxb4 32. Ra5 Nd5 33. f3 Bc8 34. Kf2 Bf5
 35. Ra7 g6 36. Ra6+ Kc5 37. Ke1 Nf4 38. g3
+```
+
+# Sample Output:
+```
+Event : F/S Return Match
+Site  : Belgrade, Serbia JUG
+Date  : 1992.11.04
+Round : 92
+White : Fischer, Robert J.
+Black : Spassky, Boris V.
+Result: 1/2-1/2
+
+  |  |  |  |  |  |  |  
+  |  |  |  |  |  |  |  
+wR|  |  |  |  |  |bP|  
+  |  |bK|  |  |bB|bP|  
+  |bP|  |  |  |  |  |  
+  |wP|  |  |  |wP|wP|bN
+  |  |  |  |  |  |  |  
+  |  |  |  |wK|  |  |  
+```
